@@ -1,15 +1,15 @@
 interface ParagraphProps {
   children: React.ReactNode;
-  variant?: 'normal' | 'strong';
+  variant?: 'normal' | 'bold';
 }
 
 const Paragraph = ({ children, variant = 'normal' }: ParagraphProps) => {
-  const base = 'text-sm';
-  const styles = {
-    normal: '',
-    strong: 'font-bold',
-    uppercase: 'font-semibold',
 
+  const base = 'mb-[30px]';
+  
+  const styles = {
+    normal: 'font-light',
+    bold: 'font-bold',
   };
 
   return <p className={`${base} ${styles[variant]}`}>{children}</p>;

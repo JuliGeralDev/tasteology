@@ -4,12 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+@theme {
   --font-body: "Open Sans", cursive;
   --bg-color: #000000;
-  --font-size-base: 2.1rem;     /* 21px */
-  --font-size-big: 3rem;        /* 30px */
-  --font-size-small: 1.5rem;    /* 15px */
+  --text-base: 2.1rem;     /* 21px */
+  --text-big: 3rem;        /* 30px */
+  --text-small: 1.5rem;    /* 15px */
 }
 
 @layer base {
@@ -19,9 +19,19 @@
 
   body {
     font-family: var(--font-body);
-    font-size: var(--font-size-base);
+    font-size: var(--text-base);
     background-color: var(--bg-color);
     line-height: 1.43;
-    color: white;
+    color: #fff;
   }
 }
+
+.title-underline::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 0.1rem;
+  background-color: #ffffff;
+  margin-top: 3rem; 
+}
+
