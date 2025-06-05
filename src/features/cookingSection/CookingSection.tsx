@@ -3,7 +3,7 @@ import CookingText from "../../components/organisms/CookingText";
 
 
 const CookingSection = () => (
-  <section className="">
+  <section>
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-[30px]">
       <div className="lg:col-span-2">
         <CookingImages />

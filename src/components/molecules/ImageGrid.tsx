@@ -1,3 +1,5 @@
+import ImageWithModal from "../atoms/ImageWithModal";
+
 interface ImageData {
   src: string;
   alt: string;
@@ -11,21 +13,19 @@ interface ImageGroup {
 
 interface ImageGridProps {
   data: ImageGroup[];
-  onImageClick: (src: string) => void;
 }
 
-const ImageGrid = ({ data, onImageClick }: ImageGridProps) => {
+const ImageGrid = ({ data }: ImageGridProps) => {
   return (
     <div className="flex flex-col lg:flex-row gap-4 flex-1">
       {data.map((group, i) => (
         <div key={i} className={group.groupClass}>
           {group.images.map((img, j) => (
-            <img
+            <ImageWithModal
               key={j}
               src={img.src}
               alt={img.alt}
-              className={`${img.className} cursor-pointer transition duration-300 ease-in-out hover:shadow-[0_0_15px_white]`}
-              onClick={() => onImageClick(img.src)}
+              className={img.className}
             />
           ))}
         </div>
