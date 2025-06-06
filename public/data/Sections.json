@@ -1,0 +1,38 @@
+[
+  {
+    "id": "taste",
+    "type": "card-grid",
+    "title": "Taste the Colours",
+    "description": "",
+    "images" : [],
+    "components": [
+      {
+        "image": { "src": "/assets/red.png", "alt": "Red food" },
+        "title": "Red",
+        "text": "Red foods remind us of berries and stimulate excitement."
+      },
+      {
+        "image": { "src": "/assets/yellow.png", "alt": "Yellow food" },
+        "title": "Yellow",
+        "text": "Yellow foods feel bright and energetic, like sunshine on a plate."
+      },
+      {
+        "image": { "src": "/assets/green.png", "alt": "Green food" },
+        "title": "Green",
+        "text": "Green foods signal health and freshness, often linked to vegetables."
+      }
+    ]    
+  },
+  {
+    "id": "cooking",
+    "type": "image-grid",
+    "title": "What does cooking mean?",
+    "description": "Is it simply applying heat to a food product? A way of making certain food safe to eat? Or a way to create flavour and make food more appealing? This is just part of what Hervé This, the father of molecular gastronomy, has dedicated his life to finding out. We spoke to him to find out what his experiments have told him. And in the process even discovered the secret to cooking the perfect egg...",
+    "images": [
+      { "src": "/assets/pot.png", "alt": "Cooking pot" },
+      { "src": "/assets/chef.png", "alt": "Chef planning" },
+      { "src": "/assets/eggs.png", "alt": "Eggs cooked" }
+    ],
+    "components": []
+  }
+]

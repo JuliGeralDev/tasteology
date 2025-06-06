@@ -1,45 +1,37 @@
-import { useState } from "react";
-import Modal from "../atoms/Modal";
-import ImageGrid from "../molecules/ImageGrid";
+import type { Image } from "../../types";
+import ImageWithModal from "../atoms/ImageWithModal";
 
-const cookingImagesData = [
-  {
-    groupClass: "flex-1",
-    images: [
-      {
-        src: "/assets/pot.png",
-        alt: "Cooking pot",
-        className: "w-full h-full object-cover",
-      },
-    ],
-  },
-  {
-    groupClass: "flex flex-col gap-4 flex-1",
-    images: [
-      {
-        src: "/assets/chef.png",
-        alt: "Chef planning",
-        className: "w-full object-cover",
-      },
-      {
-        src: "/assets/eggs.png",
-        alt: "Eggs cooked",
-        className: "w-full object-cover",
-      },
-    ],
-  },
-];
+interface Props {
+  images: Image[];
+}
 
-const CookingImages = () => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+const CookingImages = ( { images }: Props ) => {
+ const grouped = [
+    {
+      groupClass: "flex-1",
+      images: [images[0]],
+    },
+    {
+      groupClass: "flex flex-col gap-4 flex-1",
+      images: [images[1], images[2]],
+    },
+  ];
 
   return (
-    <>
-      <ImageGrid data={cookingImagesData} onImageClick={setSelectedImage} />
-      {selectedImage && (
-        <Modal imageSrc={selectedImage} onClose={() => setSelectedImage(null)} />
-      )}
-    </>
+    <div className="flex flex-col lg:flex-row gap-4 flex-1">
+      {grouped.map((group, i) => (
+        <div key={i} className={group.groupClass}>
+          {group.images.map((img, j) => (
+            <ImageWithModal
+              key={j}
+              src={img?.src}
+              alt={img?.alt}
+              className="w-full object-cover"
+            />
+          ))}
+        </div>
+      ))}
+    </div>
   );
 };
 
