@@ -16,4 +16,5 @@ export interface Section {
   description: string;
   images: Image[];
   components: Component[];
+  position: number;
 }

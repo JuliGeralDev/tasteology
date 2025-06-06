@@ -2,18 +2,28 @@ import Title from "../atoms/Title";
 import Paragraph from "../atoms/Paragraph";
 import ImageWithModal from "../atoms/ImageWithModal";
 
-const Card = () => {
+interface CardProps {
+  image: {
+    src: string;
+    alt: string;
+    className?: string;
+  };
+  title: string;
+  text: string;
+}
+
+const Card = ({ image, title, text }: CardProps) => {
   return (
-    <div className="card p-4 bg-dark rounded">
+    <div className="bg-dark rounded p-4 flex flex-col h-full">
       <ImageWithModal
-        src="/assets/red.png"
-        alt="Red"
-        className="w-full h-auto rounded"
+        src={image.src}
+        alt={image.alt}
+        className="w-full object-cover rounded mb-[30px]"
       />
-      <Title variant="normal">Card Title</Title>
-      <Paragraph>This is a simple card component.</Paragraph>
+      <Title variant="normal" as={"h2"}>{title}</Title>
+      <Paragraph>{text}</Paragraph>
     </div>
   );
-}
+};
 
 export default Card;

@@ -1,5 +1,5 @@
 import axios from "axios";
-import type { Section } from "../types/Section";
+import type { Section } from "../types/section";
 
 export const getSections = async (): Promise<Section[]> => {
   try {

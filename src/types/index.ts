@@ -1,4 +1,4 @@
 // src/lib/types/index.ts
 
-export * from "./Section";
+export * from './section'
 

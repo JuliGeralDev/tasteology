@@ -9,19 +9,20 @@
       {
         "image": { "src": "/assets/red.png", "alt": "Red food" },
         "title": "Red",
-        "text": "Red foods remind us of berries and stimulate excitement."
+        "text": "Red foods remind us of berries and soft fruits, so we anticipate a sweet taste."
       },
       {
-        "image": { "src": "/assets/yellow.png", "alt": "Yellow food" },
-        "title": "Yellow",
-        "text": "Yellow foods feel bright and energetic, like sunshine on a plate."
+        "image": { "src": "/assets/white.png", "alt": "White food" },
+        "title": "White",
+        "text": "White foods evoke memories of salt and salty flavours, driving the expectation of a savoury treat."
       },
       {
         "image": { "src": "/assets/green.png", "alt": "Green food" },
         "title": "Green",
-        "text": "Green foods signal health and freshness, often linked to vegetables."
+        "text": "Fresh, zingy green colours are reminiscent of unripe fruit, promising sour or acid flavours"
       }
-    ]    
+    ] ,
+    "position": 1
   },
   {
     "id": "cooking",
@@ -33,6 +34,8 @@
       { "src": "/assets/chef.png", "alt": "Chef planning" },
       { "src": "/assets/eggs.png", "alt": "Eggs cooked" }
     ],
-    "components": []
+    "components": [],
+    "position": 0
+
   }
 ]
