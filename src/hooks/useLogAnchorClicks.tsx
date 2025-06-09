@@ -1,5 +1,8 @@
 import { useEffect } from "react";
 
+/**
+ * Custom React hook that logs all anchor (<a>) clicks to the console for analytics/debugging purposes.
+ */
 const useLogAnchorClicks = () => {
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {

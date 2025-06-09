@@ -6,7 +6,8 @@ interface Props {
 }
 
 const CookingImages = ( { images }: Props ) => {
- const grouped = [
+  // Group images for responsive layout: first image on the left, others stacked on the right
+  const grouped = [
     {
       groupClass: "flex-1",
       images: [images[0]],

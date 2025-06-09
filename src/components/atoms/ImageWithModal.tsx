@@ -7,6 +7,10 @@ interface ImageWithModalProps {
   className?: string;
 }
 
+/**
+ * Renders an image that opens in a modal when clicked.
+ * Used for displaying images in a larger view.
+ */
 const ImageWithModal = ({ src, alt, className = "" }: ImageWithModalProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
