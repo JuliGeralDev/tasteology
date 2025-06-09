@@ -8,7 +8,10 @@ const useGetSection = () => {
   useEffect(() => {
     getSections().then((data) => {
       const sorted = data.sort((a, b) => a.position - b.position);
-      setSections(sorted);
+      
+      setTimeout(() => {
+        setSections(sorted);
+      }, 1500);
     });
   }, []);
 
