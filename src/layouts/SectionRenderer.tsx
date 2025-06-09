@@ -3,7 +3,7 @@ import { SectionContext } from "../context/SectionContext";
 import useGetSection from "../hooks/useGetSection";
 import CookingSection from "../features/cookingSection/CookingSection";
 import TasteSection from "../features/TasteSection/TasteSection";
-
+import Loader from "../components/atoms/Loader";
 
 const SectionRenderer = () => {
   const sections = useGetSection(); 
@@ -17,7 +17,7 @@ const SectionRenderer = () => {
   }, [sections]);
 
   if (isLoading) {
-    return null; 
+    return <Loader />; 
   }
 
   return (
