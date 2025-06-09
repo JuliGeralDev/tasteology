@@ -1,7 +1,8 @@
 {
-  "name": "filtaglobal",
+  "name": "tasteology",
   "private": true,
   "version": "0.0.0",
+  "author": "Juliana García Corredor @JuliGeralDev",
   "type": "module",
   "scripts": {
     "dev": "vite",
