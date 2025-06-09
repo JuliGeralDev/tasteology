@@ -1,6 +1,7 @@
 import Modal from "../atoms/Modal";
 import Title from "../atoms/Title";
 import Paragraph from "../atoms/Paragraph";
+import Image from "../atoms/Image";
 
 interface ModalCardProps {
   image: {
@@ -15,7 +16,7 @@ interface ModalCardProps {
 const ModalCard = ({ image, title, text, onClose }: ModalCardProps) => {
   return (
     <Modal onClose={onClose}>
-      <img
+      <Image
         src={image.src}
         alt={image.alt}
         className="rounded mb-4 w-full max-h-80 object-cover"

@@ -1,5 +1,6 @@
 import { useState } from "react";
-import Modal from "./Modal";
+import Modal from "../atoms/Modal";
+import Image from "../atoms/Image";
 
 interface ImageWithModalProps {
   src: string;
@@ -21,7 +22,7 @@ const ImageWithModal = ({ src, alt, className = "" }: ImageWithModalProps) => {
         className={`group focus:outline-none ${className}`}
         aria-label={`Open image modal: ${alt}`}
       >
-        <img
+        <Image
           src={src}
           alt={alt}
           className="w-full object-cover rounded cursor-pointer transition duration-300 ease-in-out 

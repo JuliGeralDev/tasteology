@@ -1,5 +1,5 @@
 import type { Image } from "../../types";
-import ImageWithModal from "../atoms/ImageWithModal";
+import ImageWithModal from "../molecules/ImageWithModal";
 
 interface Props {
   images: Image[];

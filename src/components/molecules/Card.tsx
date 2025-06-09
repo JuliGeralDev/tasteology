@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Title from "../atoms/Title";
 import Paragraph from "../atoms/Paragraph";
-import ModalCard from "../atoms/CardWithModal";
-
+import ModalCard from "./CardWithModal";
+import Image from "../atoms/Image";
 interface CardProps {
   image: {
     src: string;
@@ -25,7 +25,7 @@ const Card = ({ image, title, text }: CardProps) => {
         }}
         className="cursor-pointer transition duration-300 ease-in-out hover:shadow-[0_0_15px_white]"
       >
-        <img
+        <Image
           src={image.src}
           alt={image.alt}
           className="w-full object-cover rounded mb-[30px]"

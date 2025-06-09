@@ -1,4 +1,4 @@
-import ImageWithModal from "../atoms/ImageWithModal";
+import ImageWithModal from "./ImageWithModal";
 
 interface ImageData {
   src: string;

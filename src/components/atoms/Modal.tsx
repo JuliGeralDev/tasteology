@@ -1,3 +1,5 @@
+import Image from "./Image";
+
 interface ModalProps {
   imageSrc?: string;
   onClose: () => void;
@@ -24,7 +26,7 @@ const Modal = ({ imageSrc, onClose, children }: ModalProps) => {
         {children ? (
           children
         ) : imageSrc ? (
-          <img
+          <Image
             src={imageSrc}
             alt="Zoom"
             className="max-w-[90vw] max-h-[90vh] object-contain rounded-lg transition duration-300"
