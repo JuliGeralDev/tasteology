@@ -1,3 +1,4 @@
+import { SectionContext } from "../context/SectionContext";
 import useGetSection from "../hooks/useGetSection";
 import CookingSection from "../features/cookingSection/CookingSection";
 import TasteSection from "../features/TasteSection/TasteSection";
@@ -14,19 +15,21 @@ const SectionRenderer = () => {
             let Component = null;
             switch (type) {
                 case "image-grid":
-                    Component = <CookingSection section={section} />;
+                    Component = <CookingSection />;
                 break;
                 case "card-grid":
-                    Component = <TasteSection section={section} />;
+                    Component = <TasteSection />;
                 break;
                 default:
                     return null;
             }
 
             return (
-                <section className="p-4 sm:p-6 md:p-20 lg:p-20 xl:p-[12rem]" key={section.id}>
-                    {Component}
-                </section>
+                <SectionContext.Provider value={section} key={section.id}>
+                    <section className="p-4 sm:p-6 md:p-20 lg:p-20 xl:p-[12rem]">
+                        {Component}
+                    </section>
+                </SectionContext.Provider>
             );
             })}
         </>
