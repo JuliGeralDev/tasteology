@@ -10,7 +10,7 @@
   --text-base: 2.1rem;     /* 21px */
   --text-big: 3rem;        /* 30px */
   --text-small: 1.5rem;    /* 15px */
-  --p-section: 12rem;      /* 120px */
+
 }
 
 @layer base {
@@ -26,9 +26,6 @@
     color: #fff;
   }
 
-  section{
-    padding: var(--p-section);
-  }
 }
 
 .title-underline {
@@ -40,7 +37,7 @@
   content: '';
   display: block;
   width: 100%; /* ahora sí solo será el ancho del texto */
-  height: 2px;
+  height: 0.2rem;
   background-color: white;
-  margin-top: 8px;
+  margin-top: 0.8rem;
 }

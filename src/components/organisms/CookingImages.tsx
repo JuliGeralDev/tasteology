@@ -18,7 +18,7 @@ const CookingImages = ( { images }: Props ) => {
   ];
 
   return (
-    <div className="flex flex-col lg:flex-row gap-4 flex-1">
+    <div className="flex flex-col flex-row gap-4 flex-1">
       {grouped.map((group, i) => (
         <div key={i} className={group.groupClass}>
           {group.images.map((img, j) => (

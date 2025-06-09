@@ -24,7 +24,7 @@ const SectionRenderer = () => {
             }
 
             return (
-                <section key={section.id}>
+                <section className="p-4 sm:p-6 md:p-20 lg:p-20 xl:p-[12rem]" key={section.id}>
                     {Component}
                 </section>
             );
